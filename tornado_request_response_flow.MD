@@ -1,5 +1,8 @@
 
 tornado请求响应流程
+  socket接收到客户连接请求后，触发ioloop事件循环，并调用回到函数，其过程代码如下：
+
+  
 	asyncio.base_events.py.BaseEventLoop(events.AbstractEventLoop).run_forever(self)
 
 	asyncio.selector_events.py.BaseSelectorEventLoop(base_events.BaseEventLoop)._read_from_self(self)
